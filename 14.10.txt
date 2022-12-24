@@ -1,0 +1,4 @@
+Syntax of the sort() method and the sorted() function
+Code examples of sorting lists in ascending and descending order
+Customize sort using the key parameter
+Difference between sort() vs sorted()
