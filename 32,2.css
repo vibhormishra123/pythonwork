@@ -1,0 +1,17 @@
+
+background: green;
+
+
+background: url("test.jpg") repeat-y;
+
+
+background: border-box red;
+
+background: no-repeat center/80% url("../img/image.png");
+
+
+background: inherit;
+background: initial;
+background: revert;
+background: revert-layer;
+background: unset;
