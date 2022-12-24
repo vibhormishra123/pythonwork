@@ -1,0 +1,18 @@
+form   = formRun.form();
+design = form.design();
+
+grpCtrl = design.addControl(FormControlType::Group, #GroupControl);    
+
+while select Table_A
+{
+    idx++;
+
+    Table_ATable_BRelation = this.findOrCreateRelation(Table_A, Table_B);
+
+    chkBoxCtrl = grpCtrl.addControl(FormControlType::CheckBox, strFmt("CheckBox%1", Table_A.ID));
+    chkBoxCtrl.label(Table_A.Food_Menu);
+    chkBoxCtrl.labelPosition(LabelPosition::Above);
+    chkBoxCtrl.helpText(strFmt("your text here %1.", Table_A.Food_Menu));
+    chkBoxCtrl.value(Table_ATable_BRelation.IsSelling);
+
+    chkBoxCtrl.registerOverrideMethod(methodStr(FormCheckBoxControl, clicked),
